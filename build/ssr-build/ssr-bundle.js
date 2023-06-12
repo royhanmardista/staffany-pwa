@@ -1852,7 +1852,10 @@ var We = /^\s*<\/[a-z]/i,
 "use strict";
 /* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var preact_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("QRet");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("0XxG");
-var _templateObject, _templateObject2;
+/* harmony import */ var _components_DailyCard_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("LY4Z");
+/* harmony import */ var _components_ClockedInCard_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("rOP7");
+/* harmony import */ var _components_ClockedOutCard_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("Adfj");
+var _templateObject, _templateObject2, _templateObject3;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1862,20 +1865,24 @@ function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefine
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
+
+
+
 var Home = function Home() {
   var _useState = Object(preact_hooks__WEBPACK_IMPORTED_MODULE_0__[/* useState */ "k"])(Date.now()),
     _useState2 = _slicedToArray(_useState, 2),
     time = _useState2[0],
     setTime = _useState2[1];
-  return h("div", null, h(StyledName, null, "Hey Royhan Mardista!"), h(StyledDate, null, new Date(time).toLocaleString("en-US", {
+  return h(Container, null, h(StyledName, null, "Hey Royhan Mardista!"), h(StyledDate, null, new Date(time).toLocaleString("en-US", {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric"
-  })));
+  })), h(_components_DailyCard_index_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], null), h(_components_ClockedInCard_index_js__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null), h(_components_ClockedOutCard_index_js__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], null));
 };
-var StyledName = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 32px;\n\n  color: #000000;\n"])));
-var StyledDate = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].h2(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #000000;\n"])));
+var StyledName = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n"])));
+var StyledDate = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].h2(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #000000;\n\n  margin: 0px;\n  margin-bottom: 20px;\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n"])));
 /* harmony default export */ __webpack_exports__["a"] = (Home);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
 
@@ -2026,6 +2033,44 @@ exports.isValidElementType = function (a) {
   return "string" === typeof a || "function" === typeof a || a === d || a === f || a === v || a === e || a === l || a === m || a === w || "object" === _typeof(a) && null !== a && (a.$$typeof === p || a.$$typeof === n || a.$$typeof === g || a.$$typeof === h || a.$$typeof === k || a.$$typeof === u || a.$$typeof === q || a[0] === r) ? !0 : !1;
 };
 exports.typeOf = y;
+
+/***/ }),
+
+/***/ "Adfj":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0XxG");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ClockedOutCard = function ClockedOutCard() {
+  return h(Container, null, h(Row, null, h(SectionName, null, "Section 3X"), h(SectionCode, null, "S3X")), h(OrgName, null, "Potato Org"), h(Divider, null), h(ClockOutButton, null, "\uD83D\uDCAA Work More"), h(Row, null, h(Timing, {
+    name: "CLOCK IN",
+    number: "09:00"
+  }), h(Timing, {
+    name: "CLOCK OUT",
+    number: "18:00"
+  }), h(Timing, {
+    name: "BREAK",
+    number: "30 m"
+  })));
+};
+var Timing = function Timing(props) {
+  return h(Col, null, h(TimingName, null, props.name), h(TimingNumber, null, props.number));
+};
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n\n  padding: 14px;\n"])));
+var ClockOutButton = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 60px;\n\n  background: #fdcc71;\n  border-radius: 4px;\n  border: none;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #ffffff;\n\n  margin-bottom: 8px;\n"])));
+var SectionName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n"])));
+var OrgName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin: 0px;\n  margin-bottom: 10px;\n"])));
+var SectionCode = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 41px;\n  height: 22px;\n\n  background: #ffffff;\n\n  border: 1px solid #9b9b9b;\n  border-radius: 4px;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #000000;\n"])));
+var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n"])));
+var Divider = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  border-top: 1px solid #d9d9d9;\n"])));
+var TimingName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin: 0px;\n  margin-top: 15px;\n"])));
+var TimingNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 24px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n  margin-top: 10px;\n"])));
+var Col = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"])));
+/* harmony default export */ __webpack_exports__["a"] = (ClockedOutCard);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
 
 /***/ }),
 
@@ -2313,6 +2358,31 @@ exports.typeOf = z;
 
 /***/ }),
 
+/***/ "LY4Z":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0XxG");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var DailyCard = function DailyCard() {
+  return h(Container, null, h(Row, null, h(SectionName, null, "Section 3X"), h(SectionCode, null, "S3X")), h(OrgName, null, "Potato Org"), h(Divider, null), h(ShiftString, null, "Today 09:00 - 18:00 | 9h"), h(RoleName, null, "Role"), h(ClockInButton, null, "Clock-in"));
+};
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n\n  padding: 14px;\n\n  margin-bottom: 8px;\n"])));
+var ClockInButton = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 60px;\n\n  background: #45beb4;\n  border-radius: 4px;\n  border: none;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #ffffff;\n"])));
+var SectionName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n"])));
+var OrgName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin: 0px;\n  margin-bottom: 10px;\n"])));
+var SectionCode = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 41px;\n  height: 22px;\n\n  background: #ffffff;\n\n  border: 1px solid #9b9b9b;\n  border-radius: 4px;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #000000;\n"])));
+var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n"])));
+var ShiftString = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 24px;\n\n  color: #000000;\n\n  margin: 0px;\n  margin-top: 10px;\n"])));
+var RoleName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin-bottom: 14px;\n  margin-top: 4px;\n"])));
+var Divider = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  border-top: 1px solid #d9d9d9;\n"])));
+/* harmony default export */ __webpack_exports__["a"] = (DailyCard);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
+
+/***/ }),
+
 /***/ "QRet":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2540,164 +2610,10 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: external "preact"
 var external_preact_ = __webpack_require__("HteQ");
 
-// EXTERNAL MODULE: ../node_modules/preact-router/dist/preact-router.es.js
-var preact_router_es = __webpack_require__("Y3FI");
-
-// EXTERNAL MODULE: ../node_modules/preact-router/match.js
-var match = __webpack_require__("ox/y");
-
-// CONCATENATED MODULE: ./components/header/style.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ var style = ({"header":"header__OVZyn","logo":"logo__jPF5-","active":"active__r+Z6z"});
-// CONCATENATED MODULE: ./components/header/index.js
-
-
-
-var header_Header = function Header() {
-  return Object(external_preact_["h"])("header", {
-    class: style.header
-  }, Object(external_preact_["h"])("a", {
-    href: "/",
-    class: style.logo
-  }, Object(external_preact_["h"])("img", {
-    src: "../../assets/preact-logo-inverse.svg",
-    alt: "Preact Logo",
-    height: "32",
-    width: "32"
-  }), Object(external_preact_["h"])("h1", null, "Preact CLI")), Object(external_preact_["h"])("nav", null, Object(external_preact_["h"])(match["Link"], {
-    activeClassName: style.active,
-    href: "/"
-  }, "Home"), Object(external_preact_["h"])(match["Link"], {
-    activeClassName: style.active,
-    href: "/profile"
-  }, "Me"), Object(external_preact_["h"])(match["Link"], {
-    activeClassName: style.active,
-    href: "/profile/john"
-  }, "John")));
-};
-/* harmony default export */ var header = (header_Header);
-// EXTERNAL MODULE: ./routes/home/index.js
-var home = __webpack_require__("3br2");
-
-// EXTERNAL MODULE: ../node_modules/preact/hooks/dist/hooks.module.js
-var hooks_module = __webpack_require__("QRet");
-
-// CONCATENATED MODULE: ./routes/profile/index.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-// Note: `user` comes from the URL, courtesy of our router
-var profile_Profile = function Profile(_ref) {
-  var user = _ref.user;
-  var _useState = Object(hooks_module["k" /* useState */])(Date.now()),
-    _useState2 = _slicedToArray(_useState, 2),
-    time = _useState2[0],
-    setTime = _useState2[1];
-  var _useState3 = Object(hooks_module["k" /* useState */])(10),
-    _useState4 = _slicedToArray(_useState3, 2),
-    count = _useState4[0],
-    setCount = _useState4[1];
-  Object(hooks_module["d" /* useEffect */])(function () {
-    var timer = setInterval(function () {
-      return setTime(Date.now());
-    }, 1000);
-    return function () {
-      return clearInterval(timer);
-    };
-  }, []);
-  return Object(external_preact_["h"])("div", null, Object(external_preact_["h"])("h1", null, "Profile: ", user), Object(external_preact_["h"])("p", null, "This is the user profile for a user named ", user, "."), Object(external_preact_["h"])("div", null, "Current time: ", new Date(time).toLocaleString()), Object(external_preact_["h"])("p", null, Object(external_preact_["h"])("button", {
-    onClick: function onClick() {
-      return setCount(function (count) {
-        return count + 1;
-      });
-    }
-  }, "Click Me"), ' ', "Clicked ", count, " times."));
-};
-/* harmony default export */ var profile = (profile_Profile);
-// EXTERNAL MODULE: ./routes/login/index.js
-var login = __webpack_require__("WCH/");
-
-// CONCATENATED MODULE: ./components/app.js
-
-
-
-
-// Code-splitting is automated for `routes` directory
-
-
-
-var app_App = function App() {
-  return Object(external_preact_["h"])("div", {
-    id: "app"
-  }, Object(external_preact_["h"])("main", null, Object(external_preact_["h"])(preact_router_es["Router"], null, Object(external_preact_["h"])(home["a" /* default */], {
-    path: "/"
-  }), Object(external_preact_["h"])(login["a" /* default */], {
-    path: "/login"
-  }), Object(external_preact_["h"])(profile, {
-    path: "/profile/",
-    user: "me"
-  }), Object(external_preact_["h"])(profile, {
-    path: "/profile/:user"
-  }))));
-};
-/* harmony default export */ var app = (app_App);
-// CONCATENATED MODULE: ./index.js
-
-
-/* harmony default export */ var index = __webpack_exports__["default"] = (app);
-
-/***/ }),
-
-/***/ "WCH/":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0XxG");
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var Login = function Login() {
-  return h(Container, null, h(PreTitle, null, "Welcome to"), h(StaffAnyTitle, null, "StaffAny"), h(SubTitle, null, "\uD83E\uDD54 Potato Edition"), h(StyledForm, null, h(StyledFormLabel, null, "Your Phone Number"), h(StyledTextInput, {
-    type: "text",
-    placeholder: "+62"
-  }), h(StyledSubmit, null, "Login")));
-};
-var StaffAnyTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 40px;\n  line-height: 56px;\n\n  color: #45beb4;\n\n  margin-bottom: 0px;\n  margin-top: 0px;\n"])));
-var PreTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h3(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #9b9b9b;\n"])));
-var SubTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h4(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 24px;\n\n  color: #000000;\n"])));
-var StyledFormLabel = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].label(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #5e5e5e;\n"])));
-var StyledTextInput = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].input(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n\n  align-items: center;\n  padding: 8px;\n  gap: 8px;\n\n  width: 255px;\n  height: 40px;\n\n  background: #ffffff;\n\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 20px;\n"])));
-var StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].form(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"])));
-var StyledSubmit = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  padding: 8px 24px;\n  gap: 8px;\n\n  width: 255px;\n  height: 40px;\n  left: 31px;\n  top: 246px;\n\n  background: #45beb4;\n  border-radius: 4px;\n  border: none;\n\n  margin-top: 12px;\n"])));
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-self: center;\n"])));
-/* harmony default export */ __webpack_exports__["a"] = (Login);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
-
-/***/ }),
-
-/***/ "Y3FI":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "subscribers", function() { return subscribers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentUrl", function() { return getCurrentUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "route", function() { return route; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return Router; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return Route; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return Link; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exec", function() { return exec; });
-/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HteQ");
-/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(preact__WEBPACK_IMPORTED_MODULE_0__);
+// CONCATENATED MODULE: ../node_modules/preact-router/dist/preact-router.es.js
 
 var EMPTY$1 = {};
-function assign(obj, props) {
+function preact_router_es_assign(obj, props) {
   // eslint-disable-next-line guard-for-in
   for (var i in props) {
     obj[i] = props[i];
@@ -2798,14 +2714,14 @@ function route(url, replace) {
   }
 
   // only push URL into history if we can handle it
-  if (canRoute(url)) {
+  if (preact_router_es_canRoute(url)) {
     setUrl(url, replace ? 'replace' : 'push');
   }
   return routeTo(url);
 }
 
 /** Check if the given URL can be handled by any router instances. */
-function canRoute(url) {
+function preact_router_es_canRoute(url) {
   for (var i = ROUTERS.length; i--;) {
     if (ROUTERS[i].canRoute(url)) {
       return true;
@@ -2895,7 +2811,7 @@ function initEventListeners() {
   }
   eventListenersInitialized = true;
 }
-var Router = function (Component$$1) {
+var preact_router_es_Router = function (Component$$1) {
   function Router(props) {
     Component$$1.call(this, props);
     if (props.history) {
@@ -2918,7 +2834,7 @@ var Router = function (Component$$1) {
 
   /** Check if the given URL can be matched against any children */
   Router.prototype.canRoute = function canRoute(url) {
-    var children = Object(preact__WEBPACK_IMPORTED_MODULE_0__["toChildArray"])(this.props.children);
+    var children = Object(external_preact_["toChildArray"])(this.props.children);
     return this.getMatchingChildren(children, url, false).length > 0;
   };
 
@@ -2969,10 +2885,10 @@ var Router = function (Component$$1) {
             url: url,
             matches: matches
           };
-          assign(newProps, matches);
+          preact_router_es_assign(newProps, matches);
           delete newProps.ref;
           delete newProps.key;
-          return Object(preact__WEBPACK_IMPORTED_MODULE_0__["cloneElement"])(vnode, newProps);
+          return Object(external_preact_["cloneElement"])(vnode, newProps);
         }
         return vnode;
       }
@@ -2982,7 +2898,7 @@ var Router = function (Component$$1) {
     var children = ref.children;
     var onChange = ref.onChange;
     var url = ref$1.url;
-    var active = this.getMatchingChildren(Object(preact__WEBPACK_IMPORTED_MODULE_0__["toChildArray"])(children), url, true);
+    var active = this.getMatchingChildren(Object(external_preact_["toChildArray"])(children), url, true);
     var current = active[0] || null;
     var previous = this.previousUrl;
     if (url !== previous) {
@@ -3000,24 +2916,125 @@ var Router = function (Component$$1) {
     return current;
   };
   return Router;
-}(preact__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-var Link = function Link(props) {
-  return Object(preact__WEBPACK_IMPORTED_MODULE_0__["createElement"])('a', assign({
+}(external_preact_["Component"]);
+var preact_router_es_Link = function Link(props) {
+  return Object(external_preact_["createElement"])('a', preact_router_es_assign({
     onClick: handleLinkClick
   }, props));
 };
-var Route = function Route(props) {
-  return Object(preact__WEBPACK_IMPORTED_MODULE_0__["createElement"])(props.component, props);
+var preact_router_es_Route = function Route(props) {
+  return Object(external_preact_["createElement"])(props.component, props);
 };
-Router.subscribers = subscribers;
-Router.getCurrentUrl = getCurrentUrl;
-Router.route = route;
-Router.Router = Router;
-Router.Route = Route;
-Router.Link = Link;
-Router.exec = exec;
+preact_router_es_Router.subscribers = subscribers;
+preact_router_es_Router.getCurrentUrl = getCurrentUrl;
+preact_router_es_Router.route = route;
+preact_router_es_Router.Router = preact_router_es_Router;
+preact_router_es_Router.Route = preact_router_es_Route;
+preact_router_es_Router.Link = preact_router_es_Link;
+preact_router_es_Router.exec = exec;
 
-/* harmony default export */ __webpack_exports__["default"] = (Router);
+/* harmony default export */ var preact_router_es = (preact_router_es_Router);
+// EXTERNAL MODULE: ./routes/home/index.js
+var home = __webpack_require__("3br2");
+
+// EXTERNAL MODULE: ../node_modules/preact/hooks/dist/hooks.module.js
+var hooks_module = __webpack_require__("QRet");
+
+// CONCATENATED MODULE: ./routes/profile/index.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+// Note: `user` comes from the URL, courtesy of our router
+var profile_Profile = function Profile(_ref) {
+  var user = _ref.user;
+  var _useState = Object(hooks_module["k" /* useState */])(Date.now()),
+    _useState2 = _slicedToArray(_useState, 2),
+    time = _useState2[0],
+    setTime = _useState2[1];
+  var _useState3 = Object(hooks_module["k" /* useState */])(10),
+    _useState4 = _slicedToArray(_useState3, 2),
+    count = _useState4[0],
+    setCount = _useState4[1];
+  Object(hooks_module["d" /* useEffect */])(function () {
+    var timer = setInterval(function () {
+      return setTime(Date.now());
+    }, 1000);
+    return function () {
+      return clearInterval(timer);
+    };
+  }, []);
+  return Object(external_preact_["h"])("div", null, Object(external_preact_["h"])("h1", null, "Profile: ", user), Object(external_preact_["h"])("p", null, "This is the user profile for a user named ", user, "."), Object(external_preact_["h"])("div", null, "Current time: ", new Date(time).toLocaleString()), Object(external_preact_["h"])("p", null, Object(external_preact_["h"])("button", {
+    onClick: function onClick() {
+      return setCount(function (count) {
+        return count + 1;
+      });
+    }
+  }, "Click Me"), ' ', "Clicked ", count, " times."));
+};
+/* harmony default export */ var profile = (profile_Profile);
+// EXTERNAL MODULE: ./routes/login/index.js
+var login = __webpack_require__("WCH/");
+
+// CONCATENATED MODULE: ./components/app.js
+
+
+
+// Code-splitting is automated for `routes` directory
+
+
+
+var app_App = function App() {
+  return Object(external_preact_["h"])("div", {
+    id: "app"
+  }, Object(external_preact_["h"])("main", null, Object(external_preact_["h"])(preact_router_es_Router, null, Object(external_preact_["h"])(home["a" /* default */], {
+    path: "/"
+  }), Object(external_preact_["h"])(login["a" /* default */], {
+    path: "/login"
+  }), Object(external_preact_["h"])(profile, {
+    path: "/profile/",
+    user: "me"
+  }), Object(external_preact_["h"])(profile, {
+    path: "/profile/:user"
+  }))));
+};
+/* harmony default export */ var app = (app_App);
+// CONCATENATED MODULE: ./index.js
+
+
+/* harmony default export */ var index = __webpack_exports__["default"] = (app);
+
+/***/ }),
+
+/***/ "WCH/":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0XxG");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Login = function Login() {
+  return h(Container, null, h(PreTitle, null, "Welcome to"), h(StaffAnyTitle, null, "StaffAny"), h(SubTitle, null, "\uD83E\uDD54 Potato Edition"), h(StyledForm, null, h(StyledFormLabel, null, "Your Phone Number"), h(StyledTextInput, {
+    type: "text",
+    placeholder: "+62"
+  }), h(StyledSubmit, null, "Login")));
+};
+var StaffAnyTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h1(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 40px;\n  line-height: 56px;\n\n  color: #45beb4;\n\n  margin-bottom: 0px;\n  margin-top: 0px;\n"])));
+var PreTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h3(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #9b9b9b;\n"])));
+var SubTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].h4(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 24px;\n\n  color: #000000;\n"])));
+var StyledFormLabel = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].label(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #5e5e5e;\n"])));
+var StyledTextInput = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].input(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n\n  align-items: center;\n  padding: 8px;\n  gap: 8px;\n\n  width: 255px;\n  height: 40px;\n\n  background: #ffffff;\n\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 14px;\n  line-height: 20px;\n"])));
+var StyledForm = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].form(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"])));
+var StyledSubmit = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  padding: 8px 24px;\n  gap: 8px;\n\n  width: 255px;\n  height: 40px;\n  left: 31px;\n  top: 246px;\n\n  background: #45beb4;\n  border-radius: 4px;\n  border: none;\n\n  margin-top: 12px;\n"])));
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-self: center;\n"])));
+/* harmony default export */ __webpack_exports__["a"] = (Login);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
 
 /***/ }),
 
@@ -3028,111 +3045,42 @@ module.exports = require("stream");
 
 /***/ }),
 
-/***/ "ox/y":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "rOP7":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0XxG");
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Link = exports.Match = undefined;
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-  return target;
+var ClockedInCard = function ClockedInCard() {
+  return h(Container, null, h(Row, null, h(SectionName, null, "Section 3X"), h(SectionCode, null, "S3X")), h(OrgName, null, "Potato Org"), h(Divider, null), h(ClockOutButton, null, "Clock-out"), h(BreakButton, null, "Start Break"), h(Row, null, h(Timing, {
+    name: "CLOCK IN",
+    number: "09:00"
+  }), h(Timing, {
+    name: "CLOCK OUT",
+    number: "-"
+  }), h(Timing, {
+    name: "BREAK",
+    number: "30 m"
+  })));
 };
-var _preact = __webpack_require__("HteQ");
-var _preactRouter = __webpack_require__("Y3FI");
-function _objectWithoutProperties(obj, keys) {
-  var target = {};
-  for (var i in obj) {
-    if (keys.indexOf(i) >= 0) continue;
-    if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;
-    target[i] = obj[i];
-  }
-  return target;
-}
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-  return call && (_typeof(call) === "object" || typeof call === "function") ? call : self;
-}
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + _typeof(superClass));
-  }
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-var Match = exports.Match = function (_Component) {
-  _inherits(Match, _Component);
-  function Match() {
-    var _temp, _this, _ret;
-    _classCallCheck(this, Match);
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.update = function (url) {
-      _this.nextUrl = url;
-      _this.setState({});
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-  Match.prototype.componentDidMount = function componentDidMount() {
-    _preactRouter.subscribers.push(this.update);
-  };
-  Match.prototype.componentWillUnmount = function componentWillUnmount() {
-    _preactRouter.subscribers.splice(_preactRouter.subscribers.indexOf(this.update) >>> 0, 1);
-  };
-  Match.prototype.render = function render(props) {
-    var url = this.nextUrl || (0, _preactRouter.getCurrentUrl)(),
-      path = url.replace(/\?.+$/, '');
-    this.nextUrl = null;
-    return props.children({
-      url: url,
-      path: path,
-      matches: (0, _preactRouter.exec)(path, props.path, {}) !== false
-    });
-  };
-  return Match;
-}(_preact.Component);
-var Link = function Link(_ref) {
-  var activeClassName = _ref.activeClassName,
-    path = _ref.path,
-    props = _objectWithoutProperties(_ref, ['activeClassName', 'path']);
-  return (0, _preact.h)(Match, {
-    path: path || props.href
-  }, function (_ref2) {
-    var matches = _ref2.matches;
-    return (0, _preact.h)(_preactRouter.Link, _extends({}, props, {
-      'class': [props.class || props.className, matches && activeClassName].filter(Boolean).join(' ')
-    }));
-  });
+var Timing = function Timing(props) {
+  return h(Col, null, h(TimingName, null, props.name), h(TimingNumber, null, props.number));
 };
-exports.Link = Link;
-exports.default = Match;
-Match.Link = Link;
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n\n  padding: 14px;\n\n  margin-bottom: 8px;\n"])));
+var ClockOutButton = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  height: 60px;\n\n  background: #fdcc71;\n  border-radius: 4px;\n  border: none;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #ffffff;\n\n  margin-bottom: 8px;\n"])));
+var BreakButton = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  height: 60px;\n\n  background: #ffffff;\n  border-radius: 4px;\n  border: 2px solid #fdcc71;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 14px;\n  line-height: 20px;\n\n  color: #fdcc71;\n"])));
+var SectionName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 18px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n"])));
+var OrgName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin: 0px;\n  margin-bottom: 10px;\n"])));
+var SectionCode = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  width: 41px;\n  height: 22px;\n\n  background: #ffffff;\n\n  border: 1px solid #9b9b9b;\n  border-radius: 4px;\n\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #000000;\n"])));
+var Row = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n"])));
+var Divider = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n  border-top: 1px solid #d9d9d9;\n"])));
+var TimingName = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 12px;\n  line-height: 16px;\n\n  color: #5e5e5e;\n\n  margin: 0px;\n  margin-top: 15px;\n"])));
+var TimingNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].p(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 24px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n  margin-top: 10px;\n"])));
+var Col = styled_components__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"])));
+/* harmony default export */ __webpack_exports__["a"] = (ClockedInCard);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
 
 /***/ }),
 
