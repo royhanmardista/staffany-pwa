@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{sXKK:function(t,n,o){"use strict";o.r(n),function(t){var e=o("Y3FI"),i=o("UutA");let l,r,a,f,p,h,s,d,x=t=>t;const c=i.a.h1(l||(l=x`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{sXKK:function(t,o,n){"use strict";n.r(o),function(t){var e=n("Y3FI"),i=n("UutA");let l,r,a,f,p,h,s,d,x=t=>t;const c=i.a.h1(l||(l=x`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -81,5 +81,5 @@
   align-items: center;
   align-self: center;
   width: 100%;
-`));n.default=()=>t(z,null,t(g,null,"Welcome to"),t(c,null,"StaffAny"),t(u,null,"🥔 Potato Edition"),t(w,null,t(b,null,"Your Phone Number"),t(m,{type:"number",placeholder:"+62"}),t(e.a,{href:"/"},t(y,{onClick:()=>{}},"Login"))))}.call(this,o("hosL").h)}}]);
-//# sourceMappingURL=route-login.chunk.51af3.esm.js.map
+`));o.default=()=>t(z,null,t(g,null,"Welcome to"),t(c,null,"StaffAny"),t(u,null,"🥔 Potato Edition"),t(w,null,t(b,null,"Your Phone Number"),t(m,{type:"number",placeholder:"+62"}),t(e.a,{href:"/home"},t(y,{onClick:()=>{}},"Login"))))}.call(this,n("hosL").h)}}]);
+//# sourceMappingURL=route-login.chunk.b557a.esm.js.map

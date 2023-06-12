@@ -2075,6 +2075,53 @@ exports.typeOf = y;
 
 /***/ }),
 
+/***/ "9wh+":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("HteQ");
+/* harmony import */ var preact__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(preact__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var preact_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("QRet");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+// Note: `user` comes from the URL, courtesy of our router
+var Profile = function Profile(_ref) {
+  var user = _ref.user;
+  var _useState = Object(preact_hooks__WEBPACK_IMPORTED_MODULE_1__[/* useState */ "k"])(Date.now()),
+    _useState2 = _slicedToArray(_useState, 2),
+    time = _useState2[0],
+    setTime = _useState2[1];
+  var _useState3 = Object(preact_hooks__WEBPACK_IMPORTED_MODULE_1__[/* useState */ "k"])(10),
+    _useState4 = _slicedToArray(_useState3, 2),
+    count = _useState4[0],
+    setCount = _useState4[1];
+  Object(preact_hooks__WEBPACK_IMPORTED_MODULE_1__[/* useEffect */ "d"])(function () {
+    var timer = setInterval(function () {
+      return setTime(Date.now());
+    }, 1000);
+    return function () {
+      return clearInterval(timer);
+    };
+  }, []);
+  return Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("h1", null, "Profile: ", user), Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("p", null, "This is the user profile for a user named ", user, "."), Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, "Current time: ", new Date(time).toLocaleString()), Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("p", null, Object(preact__WEBPACK_IMPORTED_MODULE_0__["h"])("button", {
+    onClick: function onClick() {
+      return setCount(function (count) {
+        return count + 1;
+      });
+    }
+  }, "Click Me"), ' ', "Clicked ", count, " times."));
+};
+/* harmony default export */ __webpack_exports__["a"] = (Profile);
+
+/***/ }),
+
 /***/ "Adfj":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2088,7 +2135,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ClockedOutCard = function ClockedOutCard() {
   return h(Container, null, h(Row, null, h(SectionName, null, "Section 3X"), h(SectionCode, null, "S3X")), h(OrgName, null, "Potato Org"), h(Divider, null), h(ClockOutButton, {
     onClick: function onClick() {
-      return Object(preact_router__WEBPACK_IMPORTED_MODULE_0__[/* route */ "c"])("/login");
+      return Object(preact_router__WEBPACK_IMPORTED_MODULE_0__[/* route */ "c"])("/");
     }
   }, "\uD83D\uDCAA Work More"), h(Row, null, h(Timing, {
     name: "CLOCK IN",
@@ -2658,104 +2705,13 @@ __webpack_require__.r(__webpack_exports__);
 // CONCATENATED MODULE: ./style/index.css
 // extracted by mini-css-extract-plugin
 
-// EXTERNAL MODULE: external "preact"
-var external_preact_ = __webpack_require__("HteQ");
+// EXTERNAL MODULE: ./components/app.js
+var app = __webpack_require__("ugae");
 
-// EXTERNAL MODULE: ../node_modules/preact-router/dist/preact-router.es.js
-var preact_router_es = __webpack_require__("Y3FI");
-
-// EXTERNAL MODULE: ./routes/home/index.js
-var home = __webpack_require__("3br2");
-
-// EXTERNAL MODULE: ../node_modules/preact/hooks/dist/hooks.module.js
-var hooks_module = __webpack_require__("QRet");
-
-// CONCATENATED MODULE: ./routes/profile/index.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-// Note: `user` comes from the URL, courtesy of our router
-var profile_Profile = function Profile(_ref) {
-  var user = _ref.user;
-  var _useState = Object(hooks_module["k" /* useState */])(Date.now()),
-    _useState2 = _slicedToArray(_useState, 2),
-    time = _useState2[0],
-    setTime = _useState2[1];
-  var _useState3 = Object(hooks_module["k" /* useState */])(10),
-    _useState4 = _slicedToArray(_useState3, 2),
-    count = _useState4[0],
-    setCount = _useState4[1];
-  Object(hooks_module["d" /* useEffect */])(function () {
-    var timer = setInterval(function () {
-      return setTime(Date.now());
-    }, 1000);
-    return function () {
-      return clearInterval(timer);
-    };
-  }, []);
-  return Object(external_preact_["h"])("div", null, Object(external_preact_["h"])("h1", null, "Profile: ", user), Object(external_preact_["h"])("p", null, "This is the user profile for a user named ", user, "."), Object(external_preact_["h"])("div", null, "Current time: ", new Date(time).toLocaleString()), Object(external_preact_["h"])("p", null, Object(external_preact_["h"])("button", {
-    onClick: function onClick() {
-      return setCount(function (count) {
-        return count + 1;
-      });
-    }
-  }, "Click Me"), ' ', "Clicked ", count, " times."));
-};
-/* harmony default export */ var profile = (profile_Profile);
-// EXTERNAL MODULE: ./routes/login/index.js
-var login = __webpack_require__("WCH/");
-
-// EXTERNAL MODULE: ./routes/geolocation/index.js
-var geolocation = __webpack_require__("jCiL");
-
-// EXTERNAL MODULE: ./routes/home2/index.js
-var home2 = __webpack_require__("Rz4r");
-
-// EXTERNAL MODULE: ./routes/home3/index.js
-var home3 = __webpack_require__("8UYg");
-
-// CONCATENATED MODULE: ./components/app.js
-
-
-
-// Code-splitting is automated for `routes` directory
-
-
-
-
-
-
-var app_App = function App() {
-  return Object(external_preact_["h"])("div", {
-    id: "app"
-  }, Object(external_preact_["h"])("main", null, Object(external_preact_["h"])(preact_router_es["b" /* Router */], null, Object(external_preact_["h"])(home["a" /* default */], {
-    path: "/"
-  }), Object(external_preact_["h"])(home2["a" /* default */], {
-    path: "/home2"
-  }), Object(external_preact_["h"])(home3["a" /* default */], {
-    path: "/home3"
-  }), Object(external_preact_["h"])(login["a" /* default */], {
-    path: "/login"
-  }), Object(external_preact_["h"])(geolocation["a" /* default */], {
-    path: "/geolocation"
-  }), Object(external_preact_["h"])(profile, {
-    path: "/profile/",
-    user: "me"
-  }), Object(external_preact_["h"])(profile, {
-    path: "/profile/:user"
-  }))));
-};
-/* harmony default export */ var app = (app_App);
 // CONCATENATED MODULE: ./index.js
 
 
-/* harmony default export */ var index = __webpack_exports__["default"] = (app);
+/* harmony default export */ var index = __webpack_exports__["default"] = (app["a" /* default */]);
 
 /***/ }),
 
@@ -2813,7 +2769,7 @@ var Login = function Login() {
     type: "number",
     placeholder: "+62"
   }), h(preact_router__WEBPACK_IMPORTED_MODULE_0__[/* Link */ "a"], {
-    href: "/"
+    href: "/home"
   }, h(StyledSubmit, {
     onClick: function onClick(e) {
       e.preventDefault;
@@ -3282,6 +3238,51 @@ var TimingName = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a
 var TimingNumber = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].p(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n  font-family: \"Montserrat\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 24px;\n  line-height: 32px;\n\n  color: #000000;\n\n  margin: 0px;\n  margin-top: 10px;\n"])));
 var Col = styled_components__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n"])));
 /* harmony default export */ __webpack_exports__["a"] = (ClockedInCard);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
+
+/***/ }),
+
+/***/ "ugae":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(h) {/* harmony import */ var preact_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Y3FI");
+/* harmony import */ var _routes_geolocation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("jCiL");
+/* harmony import */ var _routes_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("3br2");
+/* harmony import */ var _routes_home2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Rz4r");
+/* harmony import */ var _routes_home3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("8UYg");
+/* harmony import */ var _routes_login__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("WCH/");
+/* harmony import */ var _routes_profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("9wh+");
+
+
+// Code-splitting is automated for `routes` directory
+
+
+
+
+
+
+var App = function App() {
+  return h("div", {
+    id: "app"
+  }, h("main", null, h(preact_router__WEBPACK_IMPORTED_MODULE_0__[/* Router */ "b"], null, h(_routes_login__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {
+    path: "/"
+  }), h(_routes_home__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+    path: "/home"
+  }), h(_routes_home2__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {
+    path: "/home2"
+  }), h(_routes_home3__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+    path: "/home3"
+  }), h(_routes_geolocation__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
+    path: "/geolocation"
+  }), h(_routes_profile__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {
+    path: "/profile/",
+    user: "me"
+  }), h(_routes_profile__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {
+    path: "/profile/:user"
+  }))));
+};
+/* harmony default export */ __webpack_exports__["a"] = (App);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("HteQ")["h"]))
 
 /***/ }),

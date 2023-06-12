@@ -90,7 +90,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-`));t.a=()=>n(g,null,n(k,null,n(y,null,"Section 3X"),n(M,null,"S3X")),n(w,null,"Potato Org"),n(z,null),n(b,{onClick:()=>Object(e.c)("/login")},"💪 Work More"),n(k,null,n(h,{name:"CLOCK IN",number:"09:00"}),n(h,{name:"CLOCK OUT",number:"18:00"}),n(h,{name:"BREAK",number:"30 m"})))}).call(this,o("hosL").h)},oHjU:function(n,t,o){"use strict";o.r(t),function(n){var e=o("QRet"),i=o("UutA"),l=o("Adfj");let r,a,f,p=n=>n;const s=i.a.h1(r||(r=p`
+`));t.a=()=>n(g,null,n(k,null,n(y,null,"Section 3X"),n(M,null,"S3X")),n(w,null,"Potato Org"),n(z,null),n(b,{onClick:()=>Object(e.c)("/")},"💪 Work More"),n(k,null,n(h,{name:"CLOCK IN",number:"09:00"}),n(h,{name:"CLOCK OUT",number:"18:00"}),n(h,{name:"BREAK",number:"30 m"})))}).call(this,o("hosL").h)},oHjU:function(n,t,o){"use strict";o.r(t),function(n){var e=o("QRet"),i=o("UutA"),l=o("Adfj");let r,a,f,p=n=>n;const s=i.a.h1(r||(r=p`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -116,4 +116,4 @@
   flex-direction: column;
   width: 100%;
 `));t.default=()=>{const[t,o]=Object(e.k)(Date.now());return n(d,null,n(s,null,"Hey Royhan Mardista!"),n(m,null,new Date(t).toLocaleString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"})),n(l.a,null))}}.call(this,o("hosL").h)}}]);
-//# sourceMappingURL=route-home3.chunk.ada11.esm.js.map
+//# sourceMappingURL=route-home3.chunk.7af71.esm.js.map
