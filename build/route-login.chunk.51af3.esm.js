@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{sXKK:function(t,n,o){"use strict";o.r(n),function(t){var e=o("UutA");let i,l,r,a,f,p,x,s,h=t=>t;const d=e.a.h1(i||(i=h`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{sXKK:function(t,n,o){"use strict";o.r(n),function(t){var e=o("Y3FI"),i=o("UutA");let l,r,a,f,p,h,s,d,x=t=>t;const c=i.a.h1(l||(l=x`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -9,7 +9,7 @@
 
   margin-bottom: 0px;
   margin-top: 0px;
-`)),g=e.a.h3(l||(l=h`
+`)),g=i.a.h3(r||(r=x`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -17,7 +17,7 @@
   line-height: 16px;
 
   color: #9b9b9b;
-`)),u=e.a.h4(r||(r=h`
+`)),u=i.a.h4(a||(a=x`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -25,7 +25,7 @@
   line-height: 24px;
 
   color: #000000;
-`)),c=e.a.label(a||(a=h`
+`)),b=i.a.label(f||(f=x`
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -33,7 +33,7 @@
   line-height: 20px;
 
   color: #5e5e5e;
-`)),b=e.a.input(f||(f=h`
+`)),m=i.a.input(p||(p=x`
   box-sizing: border-box;
 
   align-items: center;
@@ -44,6 +44,7 @@
   height: 40px;
 
   background: #ffffff;
+  color: #000000;
 
   border: 1px solid #d9d9d9;
   border-radius: 4px;
@@ -53,14 +54,17 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-`)),m=e.a.form(p||(p=h`
+
+  width: 100%;
+`)),w=i.a.form(h||(h=x`
   display: flex;
   flex-direction: column;
-`)),y=e.a.button(x||(x=h`
+  width: 100%;
+`)),y=i.a.button(s||(s=x`
   padding: 8px 24px;
   gap: 8px;
 
-  width: 255px;
+  width: 100%;
   height: 40px;
   left: 31px;
   top: 246px;
@@ -70,10 +74,12 @@
   border: none;
 
   margin-top: 12px;
-`)),w=e.a.div(s||(s=h`
+`)),z=i.a.div(d||(d=x`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   align-self: center;
-`));n.default=()=>t(w,null,t(g,null,"Welcome to"),t(d,null,"StaffAny"),t(u,null,"🥔 Potato Edition"),t(m,null,t(c,null,"Your Phone Number"),t(b,{type:"text",placeholder:"+62"}),t(y,null,"Login")))}.call(this,o("hosL").h)}}]);
-//# sourceMappingURL=route-login.chunk.ec615.esm.js.map
+  width: 100%;
+`));n.default=()=>t(z,null,t(g,null,"Welcome to"),t(c,null,"StaffAny"),t(u,null,"🥔 Potato Edition"),t(w,null,t(b,null,"Your Phone Number"),t(m,{type:"number",placeholder:"+62"}),t(e.a,{href:"/"},t(y,{onClick:()=>{}},"Login"))))}.call(this,o("hosL").h)}}]);
+//# sourceMappingURL=route-login.chunk.51af3.esm.js.map
