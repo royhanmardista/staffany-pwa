@@ -1,6 +1,6 @@
 {
-  "name": "my-project",
-  "short_name": "my-project",
+  "name": "PWAny",
+  "short_name": "PWAny",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
@@ -8,14 +8,46 @@
   "theme_color": "#673ab8",
   "icons": [
     {
-      "src": "/assets/icons/android-chrome-192x192.png",
+      "src": "/assets/icons/maskable_icon_x48.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "48x48",
+      "perpose": "maskable"
     },
     {
-      "src": "/assets/icons/android-chrome-512x512.png",
+      "src": "/assets/icons/maskable_icon_x72.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "72x72",
+      "perpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable_icon_x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "perpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable_icon_x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "perpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable_icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "perpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable_icon_x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "perpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/maskable_icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "perpose": "maskable"
     }
   ]
 }
