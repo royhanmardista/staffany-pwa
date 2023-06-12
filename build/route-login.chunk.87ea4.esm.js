@@ -81,5 +81,5 @@
   align-items: center;
   align-self: center;
   width: 100%;
-`));o.default=()=>t(z,null,t(g,null,"Welcome to"),t(c,null,"StaffAny"),t(u,null,"🥔 Potato Edition"),t(w,null,t(b,null,"Your Phone Number"),t(m,{type:"number",placeholder:"+62"}),t(e.a,{href:"/home"},t(y,{onClick:()=>{}},"Login"))))}.call(this,n("hosL").h)}}]);
-//# sourceMappingURL=route-login.chunk.b557a.esm.js.map
+`));o.default=()=>t(z,null,t(g,null,"Welcome to"),t(c,null,"PWAny"),t(u,null,"🥔 Potato Edition"),t(w,null,t(b,null,"Your Phone Number"),t(m,{type:"number",placeholder:"+62"}),t(e.a,{href:"/home"},t(y,{onClick:()=>{}},"Login"))))}.call(this,n("hosL").h)}}]);
+//# sourceMappingURL=route-login.chunk.87ea4.esm.js.map

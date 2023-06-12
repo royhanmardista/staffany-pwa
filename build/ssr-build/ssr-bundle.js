@@ -2765,7 +2765,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var Login = function Login() {
-  return h(Container, null, h(PreTitle, null, "Welcome to"), h(StaffAnyTitle, null, "StaffAny"), h(SubTitle, null, "\uD83E\uDD54 Potato Edition"), h(StyledForm, null, h(StyledFormLabel, null, "Your Phone Number"), h(StyledTextInput, {
+  return h(Container, null, h(PreTitle, null, "Welcome to"), h(StaffAnyTitle, null, "PWAny"), h(SubTitle, null, "\uD83E\uDD54 Potato Edition"), h(StyledForm, null, h(StyledFormLabel, null, "Your Phone Number"), h(StyledTextInput, {
     type: "number",
     placeholder: "+62"
   }), h(preact_router__WEBPACK_IMPORTED_MODULE_0__[/* Link */ "a"], {
